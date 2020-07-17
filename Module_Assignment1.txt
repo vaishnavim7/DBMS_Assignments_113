@@ -37,7 +37,7 @@ INSERT INTO Customers(Cnum, Cname, City, Rating, Snum) VALUES ('2001','Hoffman',
 
 INSERT INTO Customers(Cnum, Cname, City, Rating, Snum) VALUES ('2002','Giovanni','Rome','200','1003');
 
-INSERT INTO Customers(Cnum, Cname, City, Rating, Snum) VALUES ('2003','Liu','San Jose','200''1002');
+INSERT INTO Customers(Cnum, Cname, City, Rating, Snum) VALUES ('2003','Liu','San Jose','200','1002');
 
 INSERT INTO Customers(Cnum, Cname, City, Rating, Snum) VALUES ('2004','Grass','Berlin','300','1002');
 
