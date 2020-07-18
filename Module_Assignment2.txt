@@ -12,5 +12,4 @@ Ans: Columns/ Attributes/ Methods (for columns in table)
 
 
 4) Why isn’t it possible to see the first five rows of a table?
-Ans: No its not possible because in RDBMS row is stored where ever memory is available and hence while retrieving 
-	rows are displayed as per their address in ascending order. 
+Ans: No its not possible because in RDBMS row is stored where ever memory is available and hence while retrieving rows are displayed as per their address in ascending order. 
