@@ -4,15 +4,17 @@ Using Special Operators in Conditions.
 Ans: SELECT * FROM orders WHERE Odate = '1990-10-03' OR Odate = '1990-10-04';
 	 OR
 	 SELECT * FROM orders WHERE Odate IN ('1990-10-03', '1990-10-04');
-
+	 OR
+	 SELECT * FROM orders WHERE odate BETWEEN '03-oct-1990' AND '04-oct-1990';
+	 
 2) Write a query that selects all of the customers serviced by Peel or Motika.
 (Hint: the snum field relates the two tables to one another).
 Ans: SELECT * FROM customers WHERE Snum = '1001' OR Snum = '1004';
 
 3) Write a query that will produce all the customers whose names begin with a letter from ‘A’ to ‘G’.
-Ans: SELECT * FROM customers WHERE Cname >= 'A' AND Cname = 'G';
+Ans: SELECT * FROM customers WHERE Cname >= 'A%' AND Cname = 'G%';
 	 OR
-	 SELECT * FROM customers WHERE Cname BETWEEN 'A' AND 'H';
+	 SELECT * FROM customers WHERE Cname BETWEEN 'A%' AND 'H%';
 
 4) Write a query that selects all customers whose names begin with the letter ‘C’.
 Ans: SELECT * FROM customers WHERE Cname LIKE 'C%';
@@ -21,3 +23,4 @@ Ans: SELECT * FROM customers WHERE Cname LIKE 'C%';
 Ans: SELECT * FROM orders WHERE Amt != 0 OR Amt IS NOT NULL;
 	 OR
 	 SELECT * FROM orders WHERE Amt != 0 OR Amt != NULL;
+	 
