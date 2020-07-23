@@ -12,3 +12,5 @@ Ans: Inserting data to a table through a select statement.
 	 [(column1, column2, ... columnN)]
 	 SELECT column1, column2, ...columnN
 	 FROM table_name [WHERE condition];
+	 
+	  INSERT INTO VALUES
