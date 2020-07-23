@@ -12,6 +12,7 @@ Ans: SELECT City, Sname, Snum, Comm FROM salespeople;
 4) Write a select command that produces the rating followed by the name of each customer in San Jose.
 Ans: SELECT Rating, Cname FROM customers WHERE City = 'San Jose';
 
-5) Write a query that will produce the snum values of all salespeople (suppress the duplicates) with orders in the Orders table.
-Ans: SELECT DISTINCT Snum FROM Orders ORDER BY Snum;
+5) Write a query that will produce the snum values of all salespeople (suppress the duplicates) 
+with orders in the Orders table.
+Ans: SELECT DISTINCT Snum, Onum FROM Orders ORDER BY Snum;
 
