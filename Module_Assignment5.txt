@@ -6,7 +6,7 @@ Ans: SELECT * FROM Orders WHERE Amt > 1000;
 Ans: SELECT Sname, City FROM salespeople WHERE City = 'London' AND Comm > 0.10;
 
 3) Write a query on the Customers table whose output will exclude all customers with a rating <= 100, unless they are located in Rome.
-Ans: SELECT * FROM customers WHERE Rating <= 100 AND City != 'Rome';
+Ans: SELECT * FROM customers WHERE Rating > 100 OR City = 'Rome';
 
 4) What will be the output from the following query?
 Select * from Orders
@@ -42,5 +42,6 @@ Onum 	Amt			Odate		Cnum	Snum
 
 
 6) What is a simpler way to write this query?
-Select snum, sname, city, comm From Salespeople where (comm > .12 OR comm <.14);
+Select snum, sname, city, comm From Salespeople 
+where (comm > .12 OR comm <.14);
 Ans: Select * From Salespeople where (comm > .12 OR comm <.14);
