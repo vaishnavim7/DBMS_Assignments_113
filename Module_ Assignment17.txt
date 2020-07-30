@@ -1,0 +1,32 @@
+Assignment – 17
+Constraining the Values of your data.
+1) Create the Orders table so that all onum values as well as all combinations of cnum and snum are different
+ from one another, and so that NULL values are excluded from the date field.
+ANS: CREATE TABLE Orders1
+	(
+		Onum int(4),
+		Cnum int(4),
+		Snum int(4),
+		Odate date NOT NULL,
+		PRIMARY KEY(Onum, Cnum, Snum)
+	);
+ 
+2) Create the Salespeople table so that the default commission is 10% with no NULLS permitted, 
+snum is the primary key, and all names fall alphabetically between A and M, inclusive 
+(assume all names will be uppercase).
+ANS: CREATE TABLE salespeople1
+	(
+		Snum int(4) PRIMARY KEY,
+		Sname varchar(15) CHECK (Sname = UPPER(Sname) BETWEEN 'A' AND 'M'),
+		Comm float(3, 2) DEFAULT 0.10
+	);
+
+3) Create the Orders table, making sure that the onum is greater than the cnum, and the cnum is greater that the snum. 
+Allow no NULLS in any of these three fields.
+ANS: CREATE TABLE Orders2
+	(
+		Onum int(4)NOT NULL,
+		Cnum int(4)NOT NULL,
+		Snum int(4)NOT NULL,
+		CHECK(Onum > Cnum AND Cnum > Snum)
+	);
