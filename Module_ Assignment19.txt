@@ -1,0 +1,33 @@
+Assignment – 19
+Views.
+1) Create a view that shows all of the customers who have the highest ratings.
+ANS: CREATE VIEW V1_Cust_Rating AS
+	SELECT *
+	FROM customers
+	WHERE rating=
+    (SELECT max(Rating)
+     FROM customers);
+	 
+	SELECT * FROM V1_Cust_Rating;
+
+2) Create a view that shows the number of salespeople in each city.
+ANS: CREATE VIEW V1_Salp_City AS
+	SELECT COUNT(Snum) FROM salespeople GROUP BY City;
+	
+	SELECT * FROM V1_Salp_City;
+
+3) Create a view that shows the average and total orders for each salesperson after his or her name. Assume all names are unique.
+ANS: CREATE VIEW V1_Ord_Salp_Tot_Avg AS
+	SELECT Sname, AVG(Onum), COUNT(Onum)
+	FROM salespeople JOIN orders USING(Snum)
+	GROUP BY Sname;
+	
+	SELECT * FROM V1_Ord_Salp_Tot_Avg;
+
+4) Create a view that shows each salesperson with multiple customers.
+ANS: CREATE VIEW V1_Salep AS
+	SELECT Snum, Sname, Cname
+	FROM salespeople JOIN customers USING(Snum)
+	GROUP BY Snum;
+	
+	SELECT * FROM V1_Salep;
